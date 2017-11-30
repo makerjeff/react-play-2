@@ -1,0 +1,11 @@
+{
+  "name": "react-play-2",
+  "version": "0.0.1",
+  "description": "Lynda Learning React.js project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jefferson Wu <makerjeffwu@gmail.com>",
+  "license": "ISC"
+}
