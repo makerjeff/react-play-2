@@ -7,5 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jefferson Wu <makerjeffwu@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "clear": "0.0.1",
+    "express": "^4.16.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-browser": "^6.1.19"
+  }
 }
