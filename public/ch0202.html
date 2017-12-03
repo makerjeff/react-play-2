@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My first react file</title>
+    <title>02-02</title>
 
     <!--UMD versions-->
     <script src="lib/react.development.js"></script>
@@ -19,11 +19,8 @@
             color: red;
 
             left: 40px;
-
             cursor: pointer;
-
             transition: all 250ms ease;
-
             transform-origin: 0 50%;
         }
         .item1:hover {
@@ -34,16 +31,14 @@
 <body>
 
 <div id="react-container"></div>
-<script>
-
+<script type="text/babel">
 
     ReactDOM.render(
-        // JSX compiles down to createElement calls.
-        React.createElement('ul', {id: 'my_list', style: {color: 'rgb(220, 200, 100)', backgroundColor: 'green'}},
-            React.createElement('li', {id: 'item1', className: 'item1'}, 'item 1'),
-            React.createElement('li', null, 'item 2'),
-            React.createElement('li', null, 'item 3')
-        ),
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>,
         document.getElementById('react-container')
     );
 </script>
