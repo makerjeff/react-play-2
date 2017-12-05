@@ -23,5 +23,20 @@ Lynda Learning React.js.
     
     - Rendering multiple React components, wrap in DIV.
         - React 16 allows returning of an array of items, instead of wrapping in a div.
+        
+    - PROPS:
+        - use "this.props.\<variable\>" to pull data straight from the DOM element.
+        - use "this.props.children" to tell the component to render it's children.
+        
+    - Wrap returned divs in parenthesis.
+    
+## SVG
+- [MDN: SVG Paths](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths)
+    - "M x y" or "m dx dy"
+        - upper case is absolute positioning, lower case is relative position.
+        
+        
+## LINKS
+- [Module: React-Draggable](https://mzabriskie.github.io/react-draggable/example/): Make React components draggable with this module.
 
 

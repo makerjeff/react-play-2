@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-02c</title>
+
+    <!--UMD versions-->
+    <script src="lib/react.development.js"></script>
+    <!--<script src="lib/create-react-class.js"></script>-->
+    <script src="lib/react-dom.development.js"></script>
+    <script src="lib/browser.js"></script>
+
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
+        body, html, div.board, div#react-container {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        div.board {
+            background-color: brown;
+            width: 100%;
+        }
+
+        div.note {
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            margin: 2px 0;
+            position: absolute;
+            cursor: -webkit-grab;
+            box-shadow: 5px 5px 15px 0 rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        div.note:active {
+            cursor: -webkit-grabbing;
+        }
+
+        div.note p {
+            margin: 0;
+            font-size: 22px;
+            padding: 5px;
+            font-family: "Shadows Into Light", Arial, sans-serif;
+        }
+
+        div.note:hover > span {
+            opacity: 1;
+        }
+
+        div.note > span {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            opacity: 0;
+            transition: opacity 250ms linear;
+        }
+
+        div.note button {
+            margin: 2px;
+        }
+
+        div.note > textarea {
+            height: 75%;
+            background: rgba(255,255,255,0.5);
+        }
+
+        .board > button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5em;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div id="react-container"></div>
+
+<script type="text/babel">
+    class Note extends React.Component {
+        // edit method.
+        edit() {
+            alert('editing note!');
+        }
+
+        // remove method
+        remove() {
+            alert('removing!');
+        }
+
+        // RENDER method (always has to be there)
+        render() {
+            return (
+                <div className="note">
+
+                    <p>{this.props.children}</p>
+
+                    <span>
+                        <button onClick={this.edit}>EDIT</button>
+                        <button onClick={this.remove}>X</button>
+                    </span>
+
+                </div>
+            )
+        }
+    }
+
+    ReactDOM.render(
+        <div>
+            <Note>"This is a note. "</Note>
+
+        </div>,
+        document.getElementById('react-container'));
+
+</script>
+
+
+</body>
+</html>

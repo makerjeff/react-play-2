@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-02</title>
+
+    <!--UMD versions-->
+    <script src="lib/react.development.js"></script>
+    <!--<script src="lib/create-react-class.js"></script>-->
+    <script src="lib/react-dom.development.js"></script>
+    <script src="lib/browser.js"></script>
+
+    <style>
+        .note {
+            display: block;
+            width: 150px;
+            height: 150px;
+            box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+            background: rgb(255, 200, 0);
+        }
+
+        .note>p {
+            padding: 5px;
+        }
+
+        .note>.tools {
+            display: block;
+            position: inherit;
+            background: red;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="react-container"></div>
+
+<script type="text/babel">
+
+    class Note extends React.Component {
+        render() {
+            return (
+                <div className="note">
+
+                    <p>{this.props.note}</p>
+
+                    <div class="tools">
+                        <button>EDIT</button>
+                        <button>X</button>
+                    </div>
+
+                </div>)
+        }
+    }
+
+    ReactDOM.render(
+        <div>
+            <Note note="this is a note. And a lot of other information. Hopefully this wraps around."></Note>
+            <Note note="this is a note 3."></Note>
+            <Note note="this is a note 5."></Note>
+            <Note note="this is a note 7."></Note>
+        </div>,
+        document.getElementById('react-container'));
+
+</script>
+
+
+</body>
+</html>

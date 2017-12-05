@@ -39,7 +39,6 @@
 
     // stateless array
     const MyThirdComponent = () => {
-
         return [
             <h1 key={1}>Hello once again!</h1>,
             <p key={2}>This is my fourth React component in an array!</p>,
@@ -47,23 +46,25 @@
         ]
     };
 
+
     // ES6 class
     class MyComponent extends React.Component {
         render() {
-            return <div><h1>Hello</h1><p>This is my second react component in ES6!</p></div>
+            return <div>
+                <h1>{this.props.title}</h1>
+                <p>{this.props.children}</p>
+                <button id="first_button">Click Me</button>
+            </div>
         }
     }
 
     // ReactDOM render method
     ReactDOM.render(
         <div>
-            <MyComponent/>
-            <MySecondComponent/>
-            <MyThirdComponent/>
+            <MyComponent title="Section Title">
+                <p>This is children Text from within the ReactDOM.render().</p>
+            </MyComponent>
 
-            <MyComponent/>
-            <MySecondComponent/>
-            <MyThirdComponent/>
 
         </div>,
         document.getElementById('react-container'));
