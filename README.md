@@ -39,4 +39,7 @@ Lynda Learning React.js.
 ## LINKS
 - [Module: React-Draggable](https://mzabriskie.github.io/react-draggable/example/): Make React components draggable with this module.
 
+## ReactJS.org tutorials
+- [Functional and Class Components](https://reactjs.org/docs/components-and-props.html)
+
 

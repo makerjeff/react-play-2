@@ -1,0 +1,90 @@
+ /* REGULAR */
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('../fonts/ToyotaType-Regular.otf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('../fonts/ToyotaType-RegularIt.otf');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* LIGHT */
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('../fonts/ToyotaType-Light.otf');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('../fonts/ToyotaType-LightIt.otf');
+    font-style: italic;
+    font-weight: 200;
+}
+
+/* BOOK */
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('../fonts/ToyotaType-Book.otf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('../fonts/ToyotaType-BookIt.otf');
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* BOOK */
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('../fonts/ToyotaType-Book.otf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('../fonts/ToyotaType-BookIt.otf');
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* Semibold */
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('../fonts/ToyotaType-Semibold.otf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('../fonts/ToyotaType-SemiboldIt.otf');
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('../fonts/ToyotaType-Bold.otf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('../fonts/ToyotaType-BoldIt.otf');
+    font-style: italic;
+    font-weight: 700;
+}
+
+/* Black */
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('../fonts/ToyotaType-Black.otf');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('../fonts/ToyotaType-BlackIt.otf');
+    font-style: italic;
+    font-weight: 800;
+}

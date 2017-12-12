@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>04-02c</title>
+    <title>BASE</title>
 
     <!--UMD versions-->
     <script src="lib/react.development.js"></script>
@@ -87,41 +87,6 @@
 <div id="react-container"></div>
 
 <script type="text/babel">
-    class Note extends React.Component {
-        // edit method.
-        edit() {
-            alert('editing note!');
-        }
-
-        // remove method
-        remove() {
-            alert('removing!');
-        }
-
-        // RENDER method (always has to be there)
-        render() {
-            return (
-                <div className="note">
-
-                    <p>{this.props.children}</p>
-
-                    <span>
-                        <button onClick={this.edit}>EDIT</button>
-                        <button onClick={this.remove}>X</button>
-                    </span>
-
-                </div>
-            )
-        }
-    }
-
-    ReactDOM.render(
-        <div>
-            <Note>"This is a note. "</Note>
-            <Note>"This is another note. "</Note>
-
-        </div>,
-        document.getElementById('react-container'));
 
 </script>
 

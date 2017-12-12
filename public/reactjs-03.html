@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReactJS official 03</title>
+
+    <!--UMD versions-->
+    <script src="lib/react.development.js"></script>
+    <!--<script src="lib/create-react-class.js"></script>-->
+    <script src="lib/react-dom.development.js"></script>
+    <script src="lib/browser.js"></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            letter-spacing: 0.02em;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+    function Welcome(props) {
+
+        return <h1>Hello, my name is <a href={'/page/' + props.name.toLowerCase()}>{props.name}</a>.</h1>
+    }
+
+    function App() {
+        return (
+            <div>
+                <Welcome name="Jeff"></Welcome>
+                <Welcome name="Shirley"></Welcome>
+                <Welcome name="Josie"></Welcome>
+                <Welcome name="Dan"></Welcome>
+            </div>
+        )
+    }
+
+    ReactDOM.render(App(), document.getElementById('root'));
+
+
+</script>
+
+
+</body>
+</html>

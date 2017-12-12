@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>04-02c</title>
+    <title>04-03</title>
 
     <!--UMD versions-->
     <script src="lib/react.development.js"></script>
@@ -87,29 +87,17 @@
 <div id="react-container"></div>
 
 <script type="text/babel">
-    class Note extends React.Component {
-        // edit method.
-        edit() {
-            alert('editing note!');
-        }
+    // start here.
+    class Checkbox extends React.Component {
 
-        // remove method
-        remove() {
-            alert('removing!');
-        }
+        getInitialState() {
 
-        // RENDER method (always has to be there)
+        }
         render() {
             return (
-                <div className="note">
-
+                <div>
+                    <input type="checkbox"/>
                     <p>{this.props.children}</p>
-
-                    <span>
-                        <button onClick={this.edit}>EDIT</button>
-                        <button onClick={this.remove}>X</button>
-                    </span>
-
                 </div>
             )
         }
@@ -117,9 +105,8 @@
 
     ReactDOM.render(
         <div>
-            <Note>"This is a note. "</Note>
-            <Note>"This is another note. "</Note>
-
+            <Checkbox>A Checkbox</Checkbox>
+            <Checkbox>A second checkbox</Checkbox>
         </div>,
         document.getElementById('react-container'));
 

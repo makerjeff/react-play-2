@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReactJS official 01</title>
+
+    <!--UMD versions-->
+    <script src="lib/react.development.js"></script>
+    <!--<script src="lib/create-react-class.js"></script>-->
+    <script src="lib/react-dom.development.js"></script>
+    <script src="lib/browser.js"></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    const element = <h1>Hello World!</h1>;
+
+    ReactDOM.render(element, document.getElementById('root'));
+</script>
+
+
+</body>
+</html>

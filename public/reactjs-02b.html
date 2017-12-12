@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReactJS official 02</title>
+
+    <!--UMD versions-->
+    <script src="lib/react.development.js"></script>
+    <!--<script src="lib/create-react-class.js"></script>-->
+    <script src="lib/react-dom.development.js"></script>
+    <script src="lib/browser.js"></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            background: black;
+        }
+
+        #root {
+            color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+    function tick() {
+
+        const element = (
+                <div>
+                    <h1>Hello, World!</h1>
+                    <h2>It is {new Date().toLocaleTimeString()}.</h2>
+                </div>
+        );
+
+        ReactDOM.render(element, document.getElementById('root'));
+    }
+
+    setInterval(tick, 1000);
+
+</script>
+
+
+</body>
+</html>

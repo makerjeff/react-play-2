@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fake buttons</title>
+    <style>
+
+        body {
+            padding: 10px;
+        }
+        .fake_button {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 150px;
+            height: 50px;
+            color: white;
+            background: black;
+            border-radius: 5px;
+
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- semantic button element -->
+<button id="real_button">I am a real button</button>
+<button id="real_button_aria" aria-label="overriding text">I am a real button with aria text</button>
+<div id="fake_button" class="fake_button">fake button</div>
+<div id="fake_button_role" class="fake_button" role="button">fake button with role</div>
+<div id="fake_button_aria" class="fake_button" role="button" aria-label="Launch BJs project">button</div>
+
+</body>
+</html>
