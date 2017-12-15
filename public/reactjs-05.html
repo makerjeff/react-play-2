@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReactJS 5</title>
+
+    <!--UMD versions-->
+    <script src="lib/react.development.js"></script>
+    <!--<script src="lib/create-react-class.js"></script>-->
+    <script src="lib/react-dom.development.js"></script>
+    <script src="lib/browser.js"></script>
+
+    <link rel="stylesheet" >
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            letter-spacing: 0.02em;
+
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .card_container {
+            display: inline-block;
+            overflow: hidden;
+
+            width: 400px;
+            height: 540px;
+
+            /*border: 5px dotted red;*/
+        }
+
+        .gradient {
+            position: relative;
+            width: 400px;
+
+            bottom: 355px;
+            left: 0;
+        }
+
+        .text_container {
+            color: black;
+            position: relative;
+
+            /*bottom: 100px;*/
+            /*left: 40px;*/
+
+            padding: 40px;
+            bottom: 530px;
+        }
+
+        .text_eyebrow {
+            color: gold;
+            font-size: 1.2em;
+        }
+        .text_headline {
+            color: white;
+            font-size: 2em;
+        }
+        .text_cta {
+            color: gray;
+            font-size: 1.5em;
+        }
+        .text_cta a {
+            color: white;
+            text-decoration: none;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!-- ROOT Element for React to attach to. -->
+<div id="root"></div>
+
+<!-- RENDER LOGIC: TODO: Move to JS file. -->
+<script type="text/babel">
+
+    // Athlete Card Component: img_src, eyebrow, name, url
+    function Card(props) {
+        return (
+            <div className="card_container">
+                <img className="card_image" src={props.img_src}></img>
+                <img className="gradient" src="./images/gradient.png"></img>
+
+                <div className="text_container">
+                    <div className="text_eyebrow">{props.eyebrow}</div>
+                    <div className="text_headline">{props.name}</div>
+                    <div className="text_cta"><a href={"/athlete/" + props.url}>VIEW ATHLETE</a></div>
+                </div>
+            </div>
+        )
+    }
+
+    // Athlete Carousel Component (combined cards)
+    function AthleteCarousel(props) {
+        return (
+            <div id="athlete_carousel">
+                <Card img_src="/images/andrea_eskau.jpg" name="Andrea Eskau" eyebrow="paraskiing" url="andrea_eskau"></Card>
+                <Card img_src="/images/lauren_woolstencroft.jpg" name="Lauren Woolstencroft" eyebrow="a line skiing" url="lauren_woolstencroft"></Card>
+                <Card img_src="/images/han_min-su.jpg" name="Han Min-Su" eyebrow="para ice hockey" url="han_min-su"></Card>
+
+                <Card img_src="/images/andrea_eskau.jpg" name="Abel Diaz" eyebrow="wrestling" url="abel_diaz"></Card>
+                <Card img_src="/images/lauren_woolstencroft.jpg" name="Cynthia Nishihira" eyebrow="producing" url="cindy_n"></Card>
+                <Card img_src="/images/han_min-su.jpg" name="Ali Tahmasbi" eyebrow="executive producing" url="ali_tahmasbi"></Card>
+            </div>
+        )
+    }
+
+    // Final App (includes every piece of the page).
+    function App(props) {
+        return (AthleteCarousel());
+    }
+
+    ReactDOM.render(App(), document.getElementById('root'));
+
+
+</script>
+
+
+</body>
+</html>
